@@ -1,6 +1,6 @@
 package com.BinarySearch;
 
-//Leetcode-410
+//Leetcode- 410
 public class SplitArray {
     public static void main(String[] args) {
         int[] arr = {7, 2, 5, 10, 8};
