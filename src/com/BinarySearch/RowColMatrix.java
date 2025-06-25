@@ -2,7 +2,7 @@ package com.BinarySearch;
 
 import java.util.Arrays;
 
-public class BSIn2DArray {
+public class RowColMatrix {
     public static void main(String[] args) {
 
         int[][] matrix = {
