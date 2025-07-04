@@ -1,33 +1,46 @@
 package com.BinarySearch;
-
-//LeetCode: 744
-public class SmallestLetter {
-
+//
+public class SplitArray{
     public static void main(String[] args) {
-        char[] arr = {'c', 'f', 'j'};
-        char target = 'j';
-        char ans = nextGreatestLetter(arr, target);
-        System.out.println(ans);
+        int[] arr = {7, 2, 5, 10, 8};
+        System.out.println(splitArray(arr, 2));
+
     }
 
-    public static char nextGreatestLetter(char[] letters, char target) {
-
-
+    public static int splitArray(int[] nums, int m) {
         int start = 0;
-        int end = letters.length - 1;
+        int end = 0;
 
-        while (start <= end) {
+        for (int i = 0; i < nums.length; i++) {
+            start = Math.max(start, nums[i]);
+            end += nums[i];
+        }
+
+
+        while (start < end) {
 
             int mid = start + (end - start) / 2;
 
-            if (target < letters[mid]) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
 
+            int sum = 0;
+            int pieces = 1;
+            for (int num : nums) {
+                if (sum + num > mid) {
+
+                    sum = num;
+                    pieces++;
+                } else {
+                    sum += num;
+                }
+            }
+
+            if (pieces > m) {
+                start = mid + 1;
+            } else {
+                end = mid;
             }
 
         }
-        return letters[start % letters.length];
+        return end;
     }
 }
