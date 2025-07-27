@@ -1,4 +1,4 @@
-package com.BinarySearch;
+package com.Sorting;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ public class BubbleSort {
 
         bubbleSort(arr);
 
-        System.out.println("Sorted array from main:");
+        System.out.print("Sorted array from main: ");
         printArray(arr);
     }
 
@@ -30,7 +30,7 @@ public class BubbleSort {
             }
 
 
-            System.out.println("After pass " + (i + 1) + ":");
+            System.out.print("After pass " + (i + 1) + ": ");
             printArray(arr);
 
             if (!swapped) {
