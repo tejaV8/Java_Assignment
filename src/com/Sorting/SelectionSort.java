@@ -17,8 +17,8 @@ public class SelectionSort {
 
             if (maxIndex != last) {
                 swap(arr, last, maxIndex);
-                System.out.println("After pass " + (i + 1) + ": " + Arrays.toString(arr));
             }
+            System.out.println("After pass " + (i + 1) + ": " + Arrays.toString(arr));
         }
     }
 
